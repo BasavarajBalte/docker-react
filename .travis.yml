@@ -6,4 +6,4 @@ before_install:
   - docker build -t basavabalte/docker-react -f Dockerfile.dev .
 
 script:
-  -  docker run basavabalte/docker-react npm run test -- --coverage
+  -  docker run -e CI=true basavabalte/docker-react npm run test -- --coverage 
